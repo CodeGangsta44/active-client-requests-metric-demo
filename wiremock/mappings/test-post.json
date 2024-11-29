@@ -1,0 +1,14 @@
+{
+  "request": {
+    "method": "POST",
+    "url": "/test"
+  },
+  "response": {
+    "status": 200,
+    "body": "{\"key\": \"value\"}",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "fixedDelayMilliseconds": 10000
+  }
+}

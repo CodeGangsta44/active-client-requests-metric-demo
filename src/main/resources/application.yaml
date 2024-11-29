@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: active-client-requests-metric-demo
+  cloud:
+    gateway:
+      routes:
+        - id: test-route
+          uri: http://localhost:8080/ # long-responding route
+          predicates:
+            - Path=/test/**
+server:
+  port: 8876
+
+management:
+  endpoints:
+    web:
+      base-path: /management
+      exposure:
+        include:
+          ['prometheus']
